@@ -1,0 +1,51 @@
+<Tela1>
+    Button:
+        on_press : root.entrar()
+        text: "Entrar"
+        size_hint: .5,.1
+        pos_hint: {"center_x": 0.5, "center_y":0.1}
+        background_color: (0,200, 0)
+
+
+<Tela2>
+    orientation: "vertical"
+    Label:
+        text: "Nome do Ingrediente"
+    TextInput:
+        font_size: 35
+        id: tx1
+
+    Label:
+        text: "Quantidade [ml/g]"
+    TextInput:
+        font_size: 35
+        id: tx2
+
+    Label:
+        text: "Quantidade por Unidade [ml/g]"
+    TextInput:
+        font_size: 35
+        text: "1000"
+        id: tx3
+
+
+    Label:
+        text: "Valor da Unidade [R$]"
+    TextInput:
+        font_size: 35
+        id: tx4
+
+
+    BoxLayout:
+        Button:
+            text: "Proximo"
+            background_color: (0,200, 0)
+            on_press : root.salvar()
+        Button:
+            text: "Finalizar"
+            background_color: (200, 0, 0)
+            on_press : root.finalizar()
+
+        Label:
+            text: "R$ 0.00"
+            id: tx5
